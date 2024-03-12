@@ -5,7 +5,8 @@
         // constructors
         constructor() 
         {
-            this.ActiveLink = "";
+            this.m_activeLink = "";   // Initialize the activelink
+            this.m_routingTable = {}; // Initialize the table 
         }
 
         // Public Properties (getters and setters)
