@@ -224,7 +224,8 @@
            {
             localStorage.removeItem($(this).val());
            }
-           location.href = "/contact-list"; // refresh the page
+           loadHeader('contact-list'); // refresh the page
+           loadContent('contact-list', ActiveLinkCallBack('contact-list'));
          });
 
          $("#addButton").on("click", function() 
@@ -280,14 +281,15 @@
           localStorage.setItem(key, contact.serialize());
 
           // return to the contact list
-          location.href = "/contact-list";
-          
+          loadHeader('contact-list');
+          loadContent('contact-list', ActiveLinkCallBack('contact-list'));
         });
 
       $("#cancelButton").on("click", function()
       {
         // return to the contact list
-        location.href = "/contact-list";
+        loadHeader('contact-list');
+        loadContent('contact-list', ActiveLinkCallBack('contact-list'));
       });
     }
 
@@ -328,7 +330,8 @@
           messageArea.removeAttr("class").hide();
 
           // redirect user to secure area - contact-list.html
-          location.href = "/contact-list";
+          loadHeader('contact-list');
+          loadContent('contact-list', ActiveLinkCallBack('contact-list'));
         }
         else
         {
@@ -363,7 +366,8 @@
         // clear the login form
         document.forms[0].reset();
         // return to the home page
-        location.href = "/home";
+        loadHeader('home');
+        loadContent('home', ActiveLinkCallBack('home'));
       });
     }
 
@@ -388,7 +392,8 @@
           sessionStorage.clear();
 
           // redirect back to login
-          location.href = "/login";
+          loadHeader('login');
+          loadContent('login', ActiveLinkCallBack('login'));
         });
 
         // make it look like each nav item is an active link
@@ -415,7 +420,8 @@
       if(!sessionStorage.getItem("user"))
       {
       // redirect back to login page
-      location.href = "/login";
+      loadHeader('login');
+      loadContent('login', ActiveLinkCallBack('login'));
       }
     }
 
