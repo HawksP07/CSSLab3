@@ -415,6 +415,7 @@
       }
     }
 
+    // Function to check the session for user data before allowing them on the page.
     function authGuard()
     {
       if(!sessionStorage.getItem("user"))
