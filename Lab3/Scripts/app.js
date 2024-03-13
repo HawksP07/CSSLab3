@@ -530,6 +530,18 @@
       });
   }
   
+    // Authguard function to make sure user is logged in on the task list. 
+    function authGuard() {
+      // Get the user data from session storage
+      var user = sessionStorage.getItem('user');
+      // Check if the user has logged in yet 
+      if (!user) {
+        // User is not signed in, redirect them to the login page
+        loadHeader('login');
+        loadContent('login', ActiveLinkCallBack('login'));
+      }
+    }
+
 
     function Start()
     {
