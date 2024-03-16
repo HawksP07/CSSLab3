@@ -1,3 +1,8 @@
+// Bernie Warren Austin Pyzer 
+// 100881644 100863604 
+// March 15th 2024 
+// Lab 4 - Web Dev Css
+
 /* custom JavaScript goes here */
 
 //IIFE - Immediately Invoked Function Expression
