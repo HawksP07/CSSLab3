@@ -15,5 +15,8 @@
         // hide the task list link
         var taskList = document.getElementById('taskList');
         taskList.style.display = 'none';
+        // User is not signed in, redirect them to the login page
+        loadHeader('login');
+        loadContent('login', ActiveLinkCallBack('login'));
     }
 })();
